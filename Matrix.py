@@ -36,21 +36,23 @@ class Matrix(object):
         rec_num = 0
         for r in self._cdb.trainingSet():             #for each recipe in training data, and each ingredient
             for i in r["ingredients"]:
-                rows.append(n)                        #build rows and columns of coo sparse matrix with ingredients
+                rows.append(rec_num)                        #build rows and columns of coo sparse matrix with ingredients
                 columns.append(self._ingr[i])
             classifications.append(r["cuisine"])      #build classification vector for each recipe
             rec_num += 1
         ndarray = np.ones((len(rows),), dtype=np.float64)
         matrix = coo_matrix((ndarray, (rows, columns)), shape=(self._num_tr_rec, self._num_ingr))
+        # print "HERE"
+        # print matrix, len(classifications)
         return (matrix, classifications)
 
     def testingMatrix(self):                          #n_te_rec by n_ingr COOrdinate matrix
         rows = []                                     #COOrdinate matrix rows and columns vectors
         columns = []
         rec_num = 0
-        for r in self._cdb.trainingSet():             #for each recipe in testing data, and each ingredient
+        for r in self._cdb.testSet():             #for each recipe in testing data, and each ingredient
             for i in r["ingredients"]:
-                rows.append(n)                        #build rows and columns of coo sparse matrix with ingredients
+                rows.append(rec_num)                        #build rows and columns of coo sparse matrix with ingredients
                 columns.append(self._ingr[i])
             rec_num += 1
         ndarray = np.ones((len(rows),), dtype=np.float64)
