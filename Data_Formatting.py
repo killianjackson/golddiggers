@@ -12,5 +12,8 @@ def main():
     pickle.dump(X, open("Matrix/X.p", "wb"))
     pickle.dump(y, open("Matrix/y.p", "wb"))
 
+    (X_test) = matrix_db.testingMatrix()
+    pickle.dump(X_test, open("Matrix/X_test.p", "wb"))
+    
 if __name__ == '__main__':
     main()
