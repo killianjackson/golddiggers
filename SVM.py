@@ -18,7 +18,7 @@ def main():
 	# logreg.fit(X_train, y_train)
 
 	# clf = svm.SVC()
-	clf = LinearSVC(verbose = 0, C = 0.5)  # 0.1 for CountVectorizer
+	clf = LinearSVC(verbose = 0, C = 0.13, intercept_scaling = 0.14)  # 0.1 for CountVectorizer
 	clf.fit(X_train, y_train) 
 	print "accuracy:"
 	print clf.score(X_test, y_test) 

@@ -14,10 +14,10 @@ def main():
 	print len(y)
 	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
-	nbc = MultinomialNB(alpha=0.05)
+	nbc = MultinomialNB(alpha=0.19)
 
 	# nbc = GaussianNB()
-	nbc.fit(X_train.todense(), y_train)
+	nbc.fit(X_train, y_train)
 	print "accuracy:"
 	print nbc.score(X_test, y_test)
 
