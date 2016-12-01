@@ -17,7 +17,7 @@ def main():
 	nbc = MultinomialNB(alpha=0.05)
 
 	# nbc = GaussianNB()
-	nbc.fit(X_train.todense(), y_train)
+	nbc.fit(X_train, y_train)
 	print "accuracy:"
 	print nbc.score(X_test, y_test)
 
