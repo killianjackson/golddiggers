@@ -50,7 +50,7 @@ class Matrix(object):
         rows = []                                     #COOrdinate matrix rows and columns vectors
         columns = []
         rec_num = 0
-        for r in self._cdb.testSet():             #for each recipe in testing data, and each ingredient
+        for r in self._cdb.testingSet():             #for each recipe in testing data, and each ingredient
             for i in r["ingredients"]:
                 rows.append(rec_num)                        #build rows and columns of coo sparse matrix with ingredients
                 columns.append(self._ingr[i])
