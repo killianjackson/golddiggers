@@ -17,14 +17,14 @@ class CuisineDatabase(Db):
         self.testing_recipes_len = len(self._testing_recipes)
 
     def trainingDict(self, i):
-        if i > len(self._training_recipes):
-            return None
-        return self._training_recipes[i]
+        if i < len(self._training_recipes):
+            return self._training_recipes[i]
+        else: return None
 
     def testingDict(self, i):
-        if i > len(self._testing_recipes):
-            return None
-        return self._testing_recipes[i]
+        if i < len(self._testing_recipes):
+            return self._testing_recipes[i]
+        else: return None
 
     def trainingSet(self):
         return self._training_recipes

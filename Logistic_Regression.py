@@ -31,6 +31,5 @@ def main():
 		for i in range(len(class_labels)):
 			writer.writerow({'id': str(testing_json[i]["id"]), 'cuisine': class_labels[i]})
 
-
 if __name__ == '__main__':
 	main()    

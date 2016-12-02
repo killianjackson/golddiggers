@@ -3,6 +3,8 @@ import csv
 from Matrix import *
 from CuisineDB import *
 
+TRAIN_FILE = "resources/train.json"
+TEST_FILE = "resources/test.json"
 #Results from submitting to Kaggle = 5.038%
 
 class Classifier(object):
