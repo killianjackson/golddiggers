@@ -10,12 +10,12 @@ def main():
 	X = pickle.load(open("Matrix/X.p", "rb"))
 	y = pickle.load(open("Matrix/y.p", "rb"))
 
-	print X
-	print len(y)
+#	print X
+#	print len(y)
 	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
 	nbc = MultinomialNB(alpha=0.19)
-	nbc = BernoulliNB(alpha=0.09)
+#	nbc = BernoulliNB(alpha=0.09)
 
 	nbc.fit(X_train, y_train)
 	print "accuracy:"
