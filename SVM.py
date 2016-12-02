@@ -16,11 +16,7 @@ def main():
 	print len(y)
 	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
-	# logreg = LogisticRegression(C=1e5, multi_class='multinomial', solver = "lbfgs")
-	# logreg.fit(X_train, y_train)
-
-	# clf = svm.SVC()
-	clf = LinearSVC(verbose = 0, C = 0.13, intercept_scaling = 0.14)  # 0.1 for CountVectorizer
+	clf = LinearSVC(verbose = 0, C = 0.13, intercept_scaling = 0.14)
 	clf.fit(X_train, y_train) 
 	print "accuracy:"
 	print clf.score(X_test, y_test)
