@@ -1,0 +1,9 @@
+Instructions:
+	Download our git repository or the included ZIP folder from UCLA CCLE and unzip.
+	Download the latest SciPy, sklearn, and numpy packages.
+	Run from your terminal/console:
+		python Data_Formatting.py
+  Choose from one of these algorithms: Logistic_Regression.py, MultinomialNB.py, randomClassifier.py, RandomForest.py, SVM.py, and/or Embedded.py.
+  Run from your terminal/console:
+	  python ALGORITHM_PYTHON_FILE.py
+  Read accuracy results printed to your screen or view the output.csv file in your current directory and submit to Kaggle.
