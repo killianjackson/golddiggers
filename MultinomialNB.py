@@ -17,7 +17,7 @@ def main():
 	print len(y)
 	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
-	mnb = MultinomialNB(alpha=1.15, fit_prior=False, class_prior=None)
+	mnb = MultinomialNB(alpha=0.19)
 	mnb.fit(X_train, y_train) 
 	print "accuracy:"
 	print mnb.score(X_test, y_test)
